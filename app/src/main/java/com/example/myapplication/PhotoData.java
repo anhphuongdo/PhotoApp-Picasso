@@ -46,7 +46,6 @@ public class PhotoData {
         ArrayList<Photo> photoArrayList = new ArrayList<>();
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            //photoArrayList = objectMapper.readValue(jsonString, new TypeReference<ArrayList<Photo>>() {});
             photoArrayList = objectMapper.readValue(loadJSONFromAsset("photo.json"), new TypeReference<ArrayList<Photo>>() {});
             return photoArrayList;
 
